@@ -17,7 +17,7 @@ struct SignUpUI: View {
             MainTextField(title: "Create a password", text: $viewModel.password, type: .password)
             
             if viewModel.showError {
-                Text("Email and password must not be empty")
+                Text("Please fill all required fields.")
                     .foregroundColor(.red)
                     .font(.caption)
                     .transition(.opacity)
