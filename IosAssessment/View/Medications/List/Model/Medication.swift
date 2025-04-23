@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct Medication: Identifiable {
+struct Medication: Identifiable, Codable {
     var id = UUID().uuidString
     var name: String
-    var image: ImageResource
+    var image: String
 }
 
 struct MedicationDetails {

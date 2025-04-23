@@ -54,11 +54,11 @@ struct MedicationsListUI: View {
 
 private class ViewModel: ObservableObject {
     @Published var meds: [Medication] = [
-        Medication(name: "Medicine 1", image: .med),
-        Medication(name: "Medicine 2", image: .med),
-        Medication(name: "Medicine 3", image: .med),
-        Medication(name: "Medicine 4", image: .med),
-        Medication(name: "Medicine 5", image: .med),
+        Medication(name: "Medicine 1", image: "MedImage"),
+        Medication(name: "Medicine 2", image: "MedImage"),
+        Medication(name: "Medicine 3", image: "MedImage"),
+        Medication(name: "Medicine 4", image: "MedImage"),
+        Medication(name: "Medicine 5", image: "MedImage"),
     ]
     
     func delete(at offsets: IndexSet) {

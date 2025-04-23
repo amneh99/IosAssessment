@@ -23,6 +23,6 @@ struct MedicationCellUI: View {
 }
 
 #Preview {
-    MedicationCellUI(medication: Medication(name: "Medication", image: .med))
+    MedicationCellUI(medication: Medication(name: "Medication", image: "MedImage"))
         .padding()
 }
