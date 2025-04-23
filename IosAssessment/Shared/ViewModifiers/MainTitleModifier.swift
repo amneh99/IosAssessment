@@ -7,6 +7,27 @@
 
 import SwiftUI
 
+/// A view modifier that adds a main title above a view with consistent styling and spacing.
+///
+/// `MainTitleModifier` places a bold, blue title above the view it modifies, using a vertical stack with spacing.
+///
+/// - Parameters:
+///   - title: The title text to be displayed above the content.
+///
+/// - Styling:
+///   - Font: 24pt, bold
+///   - Color: `.mainBlue`
+///   - Vertical Spacing: 22 points between the title and the content
+///
+/// - Usage:
+/// Use via the `.addTitle(title:)` view extension:
+/// ```swift
+/// VStack {
+///     Text("Some content")
+/// }
+/// .addTitle(title: "Welcome")
+/// ```
+///
 struct MainTitleModifier: ViewModifier {
     var title: String
     

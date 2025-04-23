@@ -7,6 +7,34 @@
 
 import SwiftUI
 
+/// A custom stylized text field with a floating label and support for multiple input types.
+///
+/// `MainTextField` wraps a `TextField` or `SecureField` with consistent styling and behavior, including:
+/// - A floating label that moves above the field when text is entered
+/// - Rounded background styling
+/// - Support for different input types like text, email, and password
+///
+/// - Parameters:
+///   - title: The placeholder and label for the text field.
+///   - text: A binding to the text input.
+///   - type: The type of input expected (`.text`, `.email`, `.password`). Defaults to `.text`.
+///
+/// - Usage:
+/// ```swift
+/// @State private var email = ""
+///
+/// MainTextField(title: "Email", text: $email, type: .email)
+///     .padding()
+/// ```
+///
+/// - Styling:
+///   - Height: 60 points
+///   - Background: `.textFieldBg`
+///   - Label Font: 15pt, medium weight
+///   - Input Font: 14pt, medium weight
+///   - Corner Radius: 6 points
+///
+/// Ideal for use in forms or login screens where consistent text input fields are needed.
 struct MainTextField: View {
     var title: String
     @Binding var text: String

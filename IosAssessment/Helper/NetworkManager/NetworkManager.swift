@@ -8,9 +8,17 @@
 import Foundation
 import Combine
 
+/// Sends a network request to the provided endpoint and decodes the response into the expected type.
+    ///
+    /// - Parameter endpoint: The API endpoint to request.
+    /// - Returns: A publisher that emits a decoded response of type `T` or an error.
+    ///
+    /// - Important:
+    ///   - The `T` type must conform to `Decodable`.
+    ///   - The request is performed asynchronously and the result is returned via Combine.
+    ///
 class URLSessionAPIClient<EndpointType: APIEndpoint>: APIClient {
     func request<T: Decodable>(_ endpoint: EndpointType) -> AnyPublisher<T, Error> {
-//        let url = endpoint.baseURL.appendingPathComponent(endpoint.path)
         guard let url = URL(string: endpoint.baseURL + endpoint.path) else {
             return Fail(error: APIError.invalidResponse)
                 .eraseToAnyPublisher()
